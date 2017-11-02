@@ -23,6 +23,10 @@ func (b *Buffer) Header() http.Header {
 	return b.headers
 }
 
+func (b *Buffer) Status() int {
+	return b.resp
+}
+
 //WriteHeader implements the WriteHeader method of http.ResponseWriter
 func (b *Buffer) WriteHeader(resp int) {
 	b.resp = resp
